@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>run odin!</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="gamePlayer" onclick="startAudio()">
+    <div id="character"><img src="odin.png" draggable="false"></div>
+    <div id="block"><img src="obstacles/enemycat.png" draggable="false" id="enemy"></div>
+    <div id="background"><img src="background.avif" draggable="false"></div>
+    <p id="score">score: 0</p>
+    <div id="playScreen">
+      <img src="runodin.png" alt="logo">
+      <button onclick="startGame()">PLAY</button>
+      <p>just keep clicking to dodge stuff :P</p>
+    </div>
+    <div id="endScreen" style="visibility: hidden;">
+      <p>you lost</p>
+      <button onclick="retry()">retry</button>
+    </div>
+  </div>
+</body>
+<script src="logic.js"></script>
+<script src="audio.js"></script>
+</html>

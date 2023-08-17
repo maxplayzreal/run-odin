@@ -1,0 +1,147 @@
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#gamePlayer {
+  width: 500px;
+  height: 350px;
+  border: 1px solid black;
+  position: relative;
+}
+#score{
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  bottom: 110px;
+  left: 10px;
+  top: -130%;
+}
+
+#character {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 300px;
+  z-index: 1;
+}
+#character img{
+  width: 100%;
+  height: 100%;
+}
+#background{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -27.25%;
+  z-index: 0;
+}
+#background img{
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+#block {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  top: 255px;
+  left: 455px;
+  /*animation: block 1s linear infinite;*/
+  z-index: 1;
+}
+#block img{
+  width: 100%;
+  height: 100%;
+}
+
+.animate {
+  animation: jump 500ms;
+}
+
+@keyframes jump {
+  0% {
+    top: 300px;
+  }
+
+  30% {
+    top: 250px;
+  }
+
+  70% {
+    top: 250px;
+  }
+
+  100% {
+    top: 300px;
+  }
+}
+
+@keyframes block {
+  0% {
+    left: 455px;
+  }
+
+  100% {
+    left: -2.5px;
+  }
+}
+#endScreen{
+  background-color: black;
+  opacity: 0.75;
+  height: 45%;
+  width: 35%;
+  margin: auto;
+  position: relative;
+  top: -175%;
+  z-index: 2;
+}
+#endScreen p{
+  color: white;
+  font-family: Comic Sans MS;
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
+#endScreen button{
+  position: relative;
+  left: 37.5%;
+  top: 25%;
+}
+#playScreen{
+  width: 40%;
+  height: 45%;
+  margin: auto;
+  position: relative;
+  bottom: 25%;
+  z-index: 2;
+  top: -125%;
+}
+@keyframes hover{
+  0% {
+    top: -5px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+#playScreen img{
+  position: relative;
+  width: 100%;
+  animation: hover 1s infinite alternate;
+}
+
+#playScreen button{
+  position: relative;
+  top: 10%;
+  left: 27.5%;
+  width: 50%;
+}
+#playScreen p{
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: xx-small;
+  position: relative;
+  top: 20px;
+}
